@@ -1,0 +1,14 @@
+site_name: Tietokannat-dokumentaatio
+site_description: Tietokantakurssin dokumentaatio
+site_author: Herkko Mehtälä / JAMK
+
+theme:
+    name: material
+    language: 'en'
+    history_buttons: false
+    article_nav_bottom: false
+    article_nav_top: false
+    font:
+        text: 'Fira Sans'
+        code: 'Fira Code'
+
