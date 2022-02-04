@@ -1,0 +1,654 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tietokantakurssin dokumentaatio">
+      
+      
+        <meta name="author" content="Herkko Mehtälä / JAMK">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
+    
+    
+      
+        <title>Kertausharjoitus - Tietokannat-dokumentaatio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2b4465f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700%7CFira+Code&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kertausharjoitus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Tietokannat-dokumentaatio" class="md-header__button md-logo" aria-label="Tietokannat-dokumentaatio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tietokannat-dokumentaatio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kertausharjoitus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tietokannat-dokumentaatio" class="md-nav__button md-logo" aria-label="Tietokannat-dokumentaatio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Tietokannat-dokumentaatio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Tietokantakurssin dokumentaatio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus1/" class="md-nav__link">
+        Ympäristön pystytys
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus2/" class="md-nav__link">
+        SQL-perusteet
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus3/" class="md-nav__link">
+        Tietokantojen suunnittelu
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus4/" class="md-nav__link">
+        Normalisointi
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus5/" class="md-nav__link">
+        SQL-funktiot ja -liitokset
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus6/" class="md-nav__link">
+        SQL-taulujen luonti ja muokkaus
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus7/" class="md-nav__link">
+        Alikyselyt, näkymät ja indeksointi
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Harjoitus8/" class="md-nav__link">
+        Transaktiot, herättimet ja rollback
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kertausharjoitus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Kertausharjoitus
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#harjoitus-9-tehtava-1" class="md-nav__link">
+    Harjoitus 9 - Tehtävä 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjoitus-9-tehtava-2" class="md-nav__link">
+    Harjoitus 9 - Tehtävä 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#harjoitus-9-tehtava-1" class="md-nav__link">
+    Harjoitus 9 - Tehtävä 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjoitus-9-tehtava-2" class="md-nav__link">
+    Harjoitus 9 - Tehtävä 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="kertausharjoitus">Kertausharjoitus</h1>
+<h2 id="harjoitus-9-tehtava-1">Harjoitus 9 - Tehtävä 1</h2>
+<blockquote>
+<p>Tehtävä: Suunnittele ja toteuta tietokanta.<br />
+Aihe: todennetun osaamisen rekisteri (TOR)<br />
+Toimeksiantaja: Opetus- ja kulttuuriministeriö tai esim. yrityksen/oppilaitoksen projektitoimisto. Lisätietoja: Ari Rantala.  </p>
+</blockquote>
+<p><strong>Pakolliset toiminnot/tallennettavat tiedot:</strong>  </p>
+<ol>
+<li>Henkilötietojen ylläpito (vähintään henkilön nimi)  </li>
+<li>Osaamistietojen ylläpito (vähintään taidon nimi ja tarkempi kuvaus)  </li>
+<li>Henkilön tekemä itsearvio ja/tai asiantuntijan tekemä arvio henkilön osaamisesta (asteikolla 0-10)  </li>
+</ol>
+<p><strong>Lisätietoja ja -vaatimuksia:</strong>  </p>
+<ul>
+<li>Esimerkkejä osaamisista, osaamiskuvauksista ja niiden ryhmittelyistä.  </li>
+<li>Tietokantaan ei tallenneta henkilöille osaamistietoa ilman arviota (itsearvio tai asiantuntijan arvio)  </li>
+<li>Henkilötietoina tulee voida tallentaa tieto henkilön tyypistä kuvauksineen (esim. Tavis -&gt; Tavallinen arvioitava; Asiantuntija -&gt; OKM:n asiantuntija-arvioija; ...)  </li>
+<li>Yksi arvioija voi antaa tietylle henkilölle VAIN YHDEN arvion yhtä osaamista kohti!  </li>
+</ul>
+<p>Tästä voin aloittaa käsitteiden kartoittamisen:  </p>
+<p><strong>Henkilötiedot</strong>  </p>
+<ul>
+<li>Henkilötunnus (ID)  </li>
+<li>Henkilön nimi  </li>
+<li>Kotikaupunki  </li>
+<li>Henkilökuvaus</li>
+</ul>
+<p><strong>Osaamistiedot</strong>  </p>
+<ul>
+<li>TaitoID  </li>
+<li>Taidon nimi  </li>
+<li>Taidon lyhyt kuvaus  </li>
+<li>Kategoria</li>
+</ul>
+<p><strong>Osaamisen arvio</strong>  </p>
+<ul>
+<li>ArvioID  </li>
+<li>ArvioitavaHenkilö  </li>
+<li>Taito  </li>
+<li>Osaaminen  </li>
+<li>Arvioija  </li>
+</ul>
+<p>Näistä käsitteistä voin luoda nopean ER-kaavion:  </p>
+<p><img alt="Kuva ER kaaviosta" src="ER_diagram.jpg" /><br />
+<strong>HUOM</strong> Kuvassa <code>Arvioija</code> ja <code>TaitoArvion</code> taulujen relaation päät ovat väärinpäin!  </p>
+<p>Tästä voi hahmotella tietokannan rakenteen helposti.  </p>
+<p>ER-kaavion mukaan:<br />
+<em> Tietyllä taidolla voi olla monta arviota, mutta yhdellä arviolla voi olla vain yksi tietty taito.<br />
+</em> Yhdellä arviolla voi olla vain yksi arvioija.<br />
+* Henkilöllä voi olla monta taitoa ja arviota, mutta tietty arvio on vain yhdelle henkilölle.  </p>
+<p>Tästä voin rakentaa EER-kaavion MySQL Workbench:sissä.  </p>
+<p><img alt="Kuva EER kaaviosta" src="EER_workbench.PNG" />  </p>
+<p>Kun tämä tehdään <code>Forward engineer</code> -optiolla, saadaan tästä seuraava SQL-komento:  </p>
+<pre><code>-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Henkilo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Henkilo` (
+  `Henkilotunnus` INT NOT NULL,
+  `Nimi` VARCHAR(45) NOT NULL,
+  `Kotikunta` VARCHAR(45) NULL,
+  `HenkiloKuvaus` VARCHAR(64) NULL,
+  PRIMARY KEY (`Henkilotunnus`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Taito`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Taito` (
+  `TaitoID` INT NOT NULL,
+  `Taito` VARCHAR(45) NOT NULL,
+  `Kuvaus` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`TaitoID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Arvioija`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Arvioija` (
+  `ArvioijaID` INT NOT NULL,
+  `Nimi` VARCHAR(45) NOT NULL,
+  `Kuvaus` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ArvioijaID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`TaitoArvio`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`TaitoArvio` (
+  `Taito_TaitoID` INT NOT NULL,
+  `Henkilo_Henkilotunnus` INT NOT NULL,
+  `Arvo` INT NOT NULL,
+  `Arvioija` INT NOT NULL,
+  PRIMARY KEY (`Taito_TaitoID`, `Henkilo_Henkilotunnus`),
+  INDEX `fk_Taito_has_Henkilo_Henkilo1_idx` (`Henkilo_Henkilotunnus` ASC),
+  INDEX `fk_Taito_has_Henkilo_Taito_idx` (`Taito_TaitoID` ASC),
+  INDEX `fk_TaitoArvio_Arvioija1_idx` (`Arvioija` ASC),
+  CONSTRAINT `fk_Taito_has_Henkilo_Taito`
+    FOREIGN KEY (`Taito_TaitoID`)
+    REFERENCES `mydb`.`Taito` (`TaitoID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Taito_has_Henkilo_Henkilo1`
+    FOREIGN KEY (`Henkilo_Henkilotunnus`)
+    REFERENCES `mydb`.`Henkilo` (`Henkilotunnus`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_TaitoArvio_Arvioija1`
+    FOREIGN KEY (`Arvioija`)
+    REFERENCES `mydb`.`Arvioija` (`ArvioijaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+</code></pre>
+<p>Huomasin, että <code>taito</code> -pöydästä puuttuu "kategoria" -attribuutti, joten lisään sen komennolla:</p>
+<pre><code>ALTER TABLE taito
+ADD kategoria varchar(45);
+</code></pre>
+<h2 id="harjoitus-9-tehtava-2">Harjoitus 9 - Tehtävä 2</h2>
+<blockquote>
+<p>Lisää TOR-tietokantaasi tietoa siten, että jokaisessa taulussa on vähintään kaksi riviä ja sinne on tallennettuna:<br />
+<em> Ainakin kahden tavallisen ja kahden asiantuntijan kuvitteelliset tiedot<br />
+</em> Ainakin kaksi erilaista osaamista per osaamisryhmä (Tekniset pätevyydet, jne.)<br />
+* Itsearvioita ja asiantuntija-arvioita ainakin parille henkilölle siten, että pystytään laskemaan keskiarvoja osaamisittain ja osaamisryhmittäin.  </p>
+</blockquote>
+<p>Lisään tietokantaani tietoa henkilöistä, taidoista ja arvioijista. Lisään tietokannan pöytiin uusia rivejä <code>INSERT INTO</code> -komennolla:  </p>
+<p><img alt="Kuva komennoista" src="5_insert_into.PNG" />  </p>
+<p>Tämä tehdään muillekkin tiedoille, kunnes minulla on tarpeeksi tietoja tauluissa:  </p>
+<p><img alt="Kuva tauluista" src="1_henkilot.PNG" /><br />
+<img alt="Kuva tauluista" src="2_taidot.PNG" /><br />
+<img alt="Kuva tauluista" src="3_arvioijat.PNG" /><br />
+<img alt="Kuva tauluista" src="4_taitoarviot.PNG" />  </p>
+<p>Nyt osaamistietokannassani on tietoa!  </p>
+<p>MySQL koodia:  </p>
+<pre><code>INSERT INTO henkilo
+VALUES(1, &quot;Herkko Mehtälä&quot;, &quot;Jyväskylä&quot;, &quot;Opiskelija&quot;);
+
+INSERT INTO arvioija
+VALUES(1, &quot;Herkko Mehtälä&quot;, &quot;Opiskelija&quot;);
+
+INSERT INTO taito
+VALUES(1, &quot;Python&quot;, &quot;Python koodaus&quot;, &quot;Koodaus&quot;);
+
+INSERT INTO taitoarvio
+VALUES(1, 1, 5, 1);
+</code></pre>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Harjoitus8/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Transaktiot, herättimet ja rollback" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Transaktiot, herättimet ja rollback
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.960e086b.min.js"></script>
+      
+    
+  </body>
+</html>
